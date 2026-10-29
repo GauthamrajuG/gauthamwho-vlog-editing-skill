@@ -20,6 +20,8 @@ On Windows run Python as `py`; inside the venv as `.venv/Scripts/python`.
 |---|---|---|
 | ffmpeg 9.0.2 essentials (on PATH) | `C:/Users/Gauthamraju/AppData/Local/Programs/ffmpeg/bin` | everything except the SDR conversion; its libx265 keeps Dolby Vision |
 | **ffmpeg 9.0.2 full build** (gyan.dev) | `D:/Claude/Video/tools/ffmpeg-full/ffmpeg-9.0.2-full_build/bin/ffmpeg.exe` | only `libplacebo apply_dolbyvision` → the SDR file. Needs a Vulkan GPU (GTX 1650 works) |
+| **gpu-ai** — shared GPU Python env (PyTorch 2.11 + CUDA 12.8, torchvision, transformers, OpenCV) | `D:/Claude/Video/tools/gpu-ai/Scripts/python.exe` | any AI model on the GTX 1650 (4 GB): SAM 2.1 cut-outs for depth layering (skill object-separation). Never re-create it per project; install extras with `…/python.exe -m pip install` (+ `--index-url https://download.pytorch.org/whl/cu128` for torch packages) |
+| skills **object-separation** (barty-bart) and **audio-cleanup** (nemock) | `~/.claude/skills/` | SAM 2.1 tracked person matte; voice clarity (hum, de-ess, EQ, compression, loudness). Vetted 2026-10-29 |
 | ffmpeg-skill 2.17.3 (`npx ffmpeg-skill`, repo kajisho5/ffmpeg-skill) | `~/.claude/skills/ffmpeg-skill` | probe, scenes, audio extract, look, check. **Not** for encoding this edit (drops Dolby Vision; `broll.py` is 8-bit) |
 | faster-whisper (job venv) | `<work>/.venv` | Tamil word timings + English translation |
 | opencv-python-headless **< 5** (job venv) | `<work>/.venv` | `eye_grid.py`. OpenCV 5 removed the Haar detector; the 4.x line is what's tested |
@@ -31,6 +33,10 @@ on every sentence + every 2.2 s, the busy look the creator rejected), short-edit
 and short-form-edit (motion graphics, captions, music on every beat), marketingskills/video
 (AI generation), postplus editing-decision-engine (retired). Remotion and HyperFrames: not
 used for this kind of edit.
+
+All shared tools are described in `D:/Claude/Video/tools/README.md` (what, path, size, how to
+call, how to remove). Shared models (SAM 2.1, faster-whisper) live in
+`C:/Users/Gauthamraju/.cache/huggingface` and are reused by every project.
 
 Re-downloading the full build if it is missing (ask the creator first — it's a 169 MB download):
 `https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z` → verify the SHA-256 against
