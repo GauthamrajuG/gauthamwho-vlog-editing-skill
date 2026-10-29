@@ -61,6 +61,9 @@ Get-Process | Sort-Object PagedMemorySize64 -Descending | Select -First 8 Name,I
   App updates off.
 - Another Claude session rendering (`node … remotion-cli.js render`, `ffmpeg … pre-encode`)
   also eats memory — wait for it; never stop someone else's process.
+- Other apps the creator runs (e.g. trading terminals) can leave only ~1 GB free with no
+  leak at all. Then don't wait: encode lean (`-threads 1–3`, `-preset medium`,
+  `-x264-params rc-lookahead=20`, `-filter_threads 1`) and never `split` + `trim` one input.
 - Symptoms of low memory: `Cannot allocate memory`, `std::bad_alloc`, x265 `malloc … failed`,
   exit `0xC00000FD`, OpenBLAS / `mkl_malloc` errors, bash `fork: Resource temporarily unavailable`.
 

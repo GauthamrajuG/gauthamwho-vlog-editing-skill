@@ -18,6 +18,10 @@ Approved reference: Reel 29 → `Reel 29/Reel29_clean_SDR_v5.mp4` (posted) and
 `Reel29_clean_HDR_v5.mp4`. Every rule below comes from what the creator accepted or rejected
 while making it.
 
+**Add-on, only when the creator asks:** a 3D story graphic acted out on one line, composited
+into the room and behind them. Approved in Reel 29 v6 (the air fryer + slowing globe); see
+"Story graphics" below. It never replaces the rules of the clean edit.
+
 ## When to use
 
 - Their own vlog / day-in-the-life footage, already ordered (one long clip, usually iPhone HEVC
@@ -59,6 +63,12 @@ explicitly asks to restructure.
    - `Reel30_clean_SDR.mp4` — **the default, the one that gets posted.** H.264 BT.709, made
      from the clip's own Dolby Vision mapping, so every phone shows the bright iPhone look.
    - `Reel30_clean_HDR.mp4` — Dolby Vision 8.4 HEVC 10-bit, for HDR phones / archive.
+10. **Final hand-off** — when the creator approves a version, copy it into
+   `Reel 30/Final video/` with a unique, versioned name they can refer to later:
+   `GauthamWho_Reel30_<Topic>_v<N>_SDR.mp4` (Topic = 1–2 words for the reel's idea, e.g.
+   `GauthamWho_Reel29_AirFryerWorld_v6_SDR.mp4`). Keep the working files where they are.
+   Don't send it to Telegram unless asked (bots can't send over 50 MB; the creator said no
+   need).
 
 ## Face punch-ins (the approved retention effect)
 
@@ -150,6 +160,28 @@ Stated in the message text, not asked:
    punch-in (time + line) and every remaining cut region, so the creator can ask for any of it
    back. Keep it simple: the creator is new to editing terms — explain any term you use.
 
+## Story graphics (add-on — only when the creator asks)
+
+Only after the clean edit is approved, and only on the line the creator names. Approved
+example: Reel 29 v6, "after I switch on the air fryer, the world gets slow". A modelled air
+fryer drops in and its drawer slides shut, a wrist-up hand clicks the button, and a globe
+spinning left→right slows to a crawl. On "slow" (the punch-in) the fryer is thrown off and
+the globe glides behind his head, then squashes and whips away with a stretch.
+
+What made it land (from their feedback):
+- **objects act out the words**: no text, no speed lines;
+- **properly modelled 3D** (Remotion + `@remotion/three`) with physics in the motion;
+- **graded into the room**: black level, warmth, grain, softness, a soft wall shadow;
+- **depth**: their SAM 2.1 cut-out laid back on top, so the graphic sits behind them;
+- **tracking only if it's accurate**; otherwise fixed (on a plain wall it drifted, so it
+  was skipped);
+- **quiet synthesised SFX for the graphics only**, under the voice;
+- **storyboard photos → style frame → animation**, a yes at each step;
+- the quality bar is a professional After Effects designer. No AI video.
+
+Full pipeline, numbers and traps: `reference/story-graphics.md`. Code to start from:
+`scripts/graphics/` and `templates/remotion-story-graphic/`.
+
 ## Judging colour (where every earlier attempt went wrong)
 
 - The creator judges against their **iPhone original**. Dolby Vision players (iPhone) show it
@@ -179,7 +211,10 @@ Stated in the message text, not asked:
 
 ## Red flags — stop and re-read the recipe
 
-- You are opening Remotion or HyperFrames, or choosing a transition, font, music or SFX.
+- You are opening Remotion or HyperFrames, or choosing a transition, font, music or SFX —
+  unless the creator asked for a story graphic on a named line (then only for that beat).
+- An ffmpeg command uses `split` + `trim` on one long input (it buffers frames in RAM and
+  can drop frames silently), or you're delivering without checking the frame count.
 - You are about to run ffmpeg-skill `broll.py`, `color.py --to-sdr` or `fit.py` on this footage.
 - A punch-in is in the opening, on b-roll, crosses a jump cut, isn't 130 %, or a scene has two.
 - A segment list moves a shot out of order, or trims a black clip or an action's completion.
@@ -187,3 +222,4 @@ Stated in the message text, not asked:
 - You started cutting before the intake answer, or encoding with < 3 GB free memory.
 
 Exact commands, file formats, tools, downloads and machine fixes: `reference/pipeline.md`.
+Story graphics: `reference/story-graphics.md`.

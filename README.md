@@ -10,8 +10,12 @@ the way I like them:
 - one 130 % face punch-in per talking scene, on its strongest line, eyes always on the same line;
 - no music, sound effects, transitions, graphics or captions;
 - my iPhone colour kept (Dolby Vision), delivered as an **SDR file to post** plus an HDR file.
+- **add-on, only when I ask:** a 3D story graphic that acts out one line (Reel 29: an air
+  fryer whose button gets clicked and a spinning globe that slows down), graded into the
+  room, behind me, with small sound effects for the graphic only;
+- the approved final goes into `Final video/` as `GauthamWho_Reel<N>_<Topic>_v<N>_SDR.mp4`.
 
-Built and approved on Reel 29 (October 2026).
+Built and approved on Reel 29 (October 2026); story graphic approved in Reel 29 v6.
 
 ## Install
 
