@@ -13,9 +13,12 @@ the way I like them:
 - **add-on, only when I ask:** a 3D story graphic that acts out one line (Reel 29: an air
   fryer whose button gets clicked and a spinning globe that slows down), graded into the
   room, behind me, with small sound effects for the graphic only;
+- a second approved story graphic: a hyper-real hooded **ghost** that rises behind my left
+  shoulder, lights me with its red eyes like a real light, and swoops out behind my neck
+  (left/right always means MY body's side);
 - the approved final goes into `Final video/` as `GauthamWho_Reel<N>_<Topic>_v<N>_SDR.mp4`.
 
-Built and approved on Reel 29 (October 2026); story graphic approved in Reel 29 v6.
+Built and approved on Reel 29 (October 2026); story graphics approved in Reel 29 v6 (air fryer) and v7 (ghost).
 
 ## Install
 

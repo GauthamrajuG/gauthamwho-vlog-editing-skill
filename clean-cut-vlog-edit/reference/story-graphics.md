@@ -113,3 +113,52 @@ the CG composited in HDR). Say so when you deliver.
 "SLOW" set behind his head in the kitchen shot, using the same layers as step 6 (text from
 HyperFrames as RGBA frames, `depth_text_composite.py`). Offer it only when the creator wants
 words rather than objects. They still add captions themselves later.
+
+## Example 2: the walk-in ghost (Reel 29 v7, approved)
+
+`Reel 29/Final video/GauthamWho_Reel29_AirFryerGhost_v7_SDR.mp4`, 36.15–37.85 s (the dark
+stair walk-in, plate_wide indexes 23..124 = source frames 2623..2724). This is a reaction
+graphic with no spoken line: the creator picked the shot and described the beat. Code:
+`scripts/graphics/ghost/`, Remotion `templates/remotion-ghost/`.
+
+### What the creator asked for, and corrected
+
+| Asked / corrected | Rule it became |
+|---|---|
+| "My right shoulder" turned out to mean **their own** right | **Sides are always the creator's body sides.** In a non-mirrored iPhone selfie (shop signs read normally), their LEFT shoulder is SCREEN RIGHT. Say both in every message: "your left shoulder (screen right)". |
+| A white-sheet/cartoon ghost → "horror, dark body, dark clothes, glowing eyes, hyper realistic" | Hooded, dark-robed 3D figure (lathe profile with cloth folds, velvet sheen), black face void, two slanted emissive eyes (angry = inner corners low). |
+| "The glow should reflect on me based on physics" | The eyes are a light source. Its inverse-square falloff is computed in **linear light**. On the person: a rim on the edges that face the eyes (outward normal from the blurred matte · direction to the eyes), and a back-light rim when the eyes are behind them. On the wall: only a local spill (the eyes face forward). Plus lens bloom from the visible eyes. |
+| "Don't come up this high, only to my shoulder" | Peeks rise only to the shoulder line. Find it from the cut-out every frame. |
+| "Lower body cut like a sticker" (a smoke dissolve at the chest) | **Full body**, solid down out of frame. No smoke cut. Ragged only along the outline. |
+| "Not a sticker sliding to a place: a living thing with physics" | Rise with a **damped spring** (overshoot, settle) and **breathing**; **anticipation** before it moves; exit on a **Catmull-Rom curve** (dip behind the neck, out over the other shoulder), accelerating; the **hem follows the head through a spring** (secondary motion); cloth ripple speeds up with motion. Cap banking at ~0.3 rad: 0.5 rad + motion blur made the eyes read as "‖". |
+| Storyboard v1/v2 were flat 2D sketches | Storyboard v3 = the **real 3D figure composited on the real frames**, with **dotted outlines** where it's hidden (dark, or behind them) and the exit path drawn in. That's what got approved. |
+
+### Pipeline differences from the air fryer
+
+- **Locked to the person, not the wall.** Their shoulder and head positions come from the
+  cut-out every frame (`motion.py`, lightly smoothed), so the ghost rides the handheld shake.
+  No optical-flow camera tracking needed.
+- **The motion is solved in Python** (`motion.py` → `track.json` with x, y, rot, eyes, drag,
+  phase, velocity per frame). Remotion only draws it (`GhostMotion.tsx`), and the compositor
+  reads the same file for the light position and motion blur. There is one source of truth.
+- **Hair:** refine the SAM matte with a guided filter on the plate (`guided()`, r 10, eps
+  2e-3), solid inside and empty far outside, so strands stay in front of the figure.
+- **Cut-outs on many frames** (`cutout_shot.py`): seed with a good single-frame matte, then
+  propagate forward in 20-frame chunks and backward. It resumes from the last mask. Check
+  IoU against the hand-checked storyboard mattes (≥ 0.97). For single frames, try 6 click
+  sets (3 on the head, 3 on the body) and keep the best IoU. One click set alone sometimes
+  dropped the head.
+- **Sound** (`sfx.py`): low rumble as it rises, a hiss + low hit when the eyes ignite, and a
+  whoosh panned right → left on the exit. About −13 dBFS peak before mixing; the mix stays
+  at −14.9 LUFS.
+- **Delivery:** a ~4.5 s preview with sound first (`preview.sh`). After the yes, swap the
+  window into the latest approved full version as the next version number. Check the frame
+  count and the frames at both joins.
+
+### Traps
+
+- Remotion `--sequence` names files `element-000.png` (zero-padded to the frame count).
+- `CUDA error: unknown error / resource already mapped / Memory allocation failure` in SAM
+  meant the PC was out of **RAM** (AppXSvc leak), not a GPU fault. Keep only 960-wide
+  frames in memory and ask the creator to end AppXSvc (Task Manager → Details → svchost
+  with that PID → End task).

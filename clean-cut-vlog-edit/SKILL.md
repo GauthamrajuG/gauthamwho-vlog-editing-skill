@@ -179,8 +179,19 @@ What made it land (from their feedback):
 - **storyboard photos → style frame → animation**, a yes at each step;
 - the quality bar is a professional After Effects designer. No AI video.
 
+Second approved example, Reel 29 v7: a **hyper-real hooded ghost** on the dark walk-in. It
+rises behind their LEFT shoulder (screen right) only to shoulder level, its red eyes light
+them and the wall like a real light, then it swoops behind their neck on a curve and out
+over the other shoulder. It moves like a living thing (spring rise, breathing,
+anticipation, trailing cloth) and has a full body, never a sticker cut.
+- **Sides = the creator's own body sides.** Write "your left shoulder (screen right)".
+- **Light from a graphic must physically light the person and the room** (rim, back-light,
+  local spill, bloom) when the creator asks for realism.
+- Storyboard with the real 3D figure on the real frames (dotted where hidden) → still →
+  4.5 s preview with sound → full video.
+
 Full pipeline, numbers and traps: `reference/story-graphics.md`. Code to start from:
-`scripts/graphics/` and `templates/remotion-story-graphic/`.
+`scripts/graphics/` (+ `ghost/`), `templates/remotion-story-graphic/` and `templates/remotion-ghost/`.
 
 ## Judging colour (where every earlier attempt went wrong)
 
