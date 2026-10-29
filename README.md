@@ -23,7 +23,7 @@ Copy the `clean-cut-vlog-edit` folder into your Claude Code skills folder:
 Or from a terminal:
 
 ```bash
-git clone https://github.com/GauthamWho/gauthamwho-vlog-editing-skill
+git clone https://github.com/GauthamrajuG/gauthamwho-vlog-editing-skill
 ```
 
 then copy `gauthamwho-vlog-editing-skill/clean-cut-vlog-edit` into the skills folder above.
