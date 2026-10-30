@@ -274,20 +274,123 @@ several GB → End task).
 
 ---
 
-## What's inside
+## What's inside, and do I ever touch it?
 
-| Path | What it is |
-|---|---|
-| `gauthamwho-edit/SKILL.md` | the main skill: my editing style, both jobs, all the rules |
-| `gauthamwho-edit/reference/creative-engine.md` | how ideas are found, filtered and presented |
-| `gauthamwho-edit/reference/story-graphics.md` | the full graphics pipeline, with the air fryer and ghost as worked examples |
-| `gauthamwho-edit/reference/skill-routing.md` | which skill to read at which stage, and the never-use list |
-| `gauthamwho-edit/reference/pipeline.md` | exact commands, tools and PC fixes |
-| `gauthamwho-edit/scripts/` | cut planner, eye grid, builder, transcriber, plus `graphics/` (cut-out, motion, compositing, sound) |
-| `gauthamwho-edit/templates/` | the 3D models: air fryer, hand, globe, ghost (Remotion + three.js) |
-| `gauthamwho-edit/vendor/` | three MIT guides: VFX compositing, shot direction, social shorts |
-| `gauthamwho-ideas/`, `gauthamwho-start/` | the two short command files |
-| `assets/` | the pictures in this README |
+**Short answer: no. You never open, call or link these files.** You only type one of the three
+commands. Claude then opens the right files **by itself**, in the right order, like a crew
+member reaching for the right tool. The files are the skill's **memory and toolbox**.
+
+```mermaid
+flowchart LR
+  ME(["You type<br/>/gauthamwho-start Reel 30"]) --> C["Claude"]
+  C -->|"reads first"| S["SKILL.md<br/>the rulebook"]
+  S -->|"when it needs ideas"| CE["creative-engine.md<br/>the idea method"]
+  S -->|"when it builds a graphic"| SG["story-graphics.md<br/>the graphics recipe"]
+  SG -->|"for camera, light, motion..."| SR["skill-routing.md<br/>which expert to ask"]
+  SR --> V["vendor/ + other skills<br/>the experts' notes"]
+  S -->|"for exact commands"| PL["pipeline.md<br/>the technical manual"]
+  S -->|"to do the work"| SC["scripts/<br/>the tools"]
+  SG -->|"to start a 3D model"| T["templates/<br/>3D models to reuse"]
+```
+
+Think of it like a film crew. `SKILL.md` is the **director's rulebook**, the reference files are
+the **department handbooks**, `scripts/` are the **machines**, and `templates/` is the **props
+store**.
+
+### Each part, with an example of when it's used
+
+#### 📕 `gauthamwho-edit/SKILL.md`: the rulebook
+- **What:** everything about your style: "cut pauses over 0.25 s", "one 130 % punch-in per
+  scene", "never music", "left means your left", the 12 realism rules, the red flags.
+- **When it's used:** on **every** command, first.
+- **Example:** you say "make it high retention". The rulebook makes Claude cut pauses and add
+  punch-ins, **not** add music and transitions like other editors would.
+
+#### 💡 `gauthamwho-edit/reference/creative-engine.md`: the idea method
+- **What:** how to find ideas nobody else has. Read the set, use 10 lenses, throw out
+  anything generic, score the rest, sketch the top 3.
+- **When it's used:** `/gauthamwho-ideas`, `/gauthamwho-start`, or whenever you say "give me ideas".
+- **Example:** it notices a dark staircase at 0:36 and that the reel goes out at night. The
+  "hidden passenger" lens plus the "viewer's moment" lens give the ghost idea.
+
+#### 🎬 `gauthamwho-edit/reference/story-graphics.md`: the graphics recipe
+- **What:** the full step-by-step way to put 3D into your footage, with the air fryer and the
+  ghost written up as worked examples, including what you corrected along the way.
+- **When it's used:** when a graphic is being made.
+- **Example:** before making a new creature, Claude reads how the ghost was done. It learns
+  "full body, never a straight cut", "rise only to shoulder level", "anchor to the shoulder",
+  and does it right the first time.
+
+#### 🧭 `gauthamwho-edit/reference/skill-routing.md`: which expert to ask
+- **What:** a map of the other skills on your PC. For each stage (camera, lighting, motion,
+  framing, review…) it names the best skill to read. It also lists the **banned** skills that
+  use paid APIs or AI video.
+- **When it's used:** during graphics work, stage by stage.
+- **Example:** planning a camera move, Claude reads *directing-live-video*'s camera notes. For
+  motion blur it reads *business-motion-film*. It never touches *kvk-make-a-video*, which uses
+  paid AI video.
+
+#### 🔧 `gauthamwho-edit/reference/pipeline.md`: the technical manual
+- **What:** exact commands, which tools are installed where, and fixes for your PC (like the
+  AppXSvc memory leak).
+- **When it's used:** whenever Claude runs ffmpeg, the transcriber or a build.
+- **Example:** a build crashes with "out of memory". The manual tells Claude it's AppXSvc, so it
+  asks **you** to end it in Task Manager instead of guessing.
+
+#### ⚙️ `gauthamwho-edit/scripts/`: the machines
+Small programs Claude runs for you. You never run them yourself.
+
+| Script | What it does | Example |
+|---|---|---|
+| `transcribe.py` | writes down your Tamil speech with the time of every word, plus English | knows "petrol" is said at 13.61 s, so a cut never lands inside the word |
+| `plan_cuts.py` | turns your answers + the words into the list of cuts | removes a 1.1 s pause, keeps your "plug → switch on" whole |
+| `eye_grid.py` | puts a grid on a frame so your eye position can be measured | places the punch-in so your eyes sit on the upper third |
+| `build_reel.py` | builds the two final videos from the original clip | makes `Reel30_clean_SDR.mp4` and `Reel30_clean_HDR.mp4` |
+| `graphics/cutout_all.py` | cuts you out of every frame (AI on your graphics card) | lets the globe go **behind** your head |
+| `graphics/compose_*.py` | blends the 3D into your footage: colour, grain, shadow, light | makes the air fryer look like it's in your room |
+| `graphics/sfx.py` | makes the little sound effects from scratch (nothing downloaded) | the click of the air fryer button |
+| `graphics/ghost/…` | the ghost's tools: motion, red light, preview | makes the ghost's red eyes light your hair |
+
+#### 🧸 `gauthamwho-edit/templates/`: the props store
+- **What:** the 3D models already built: the air fryer, the wrist-hand, the globe, the ghost.
+- **When it's used:** when a new graphic needs something similar.
+- **Example:** a new reel needs a toaster. Claude starts from the air fryer's body, buttons and
+  materials instead of from zero, so it's faster and keeps the same quality.
+
+#### 📚 `gauthamwho-edit/vendor/`: notes from outside experts
+- **What:** three free (MIT) professional guides: VFX compositing, camera/shot direction, and
+  short-video production.
+- **When it's used:** only when our skill calls them. They can **never** take over your edit on
+  their own, for example by adding captions or music.
+- **Example:** before the final check, Claude runs the compositing guide's 7-step check,
+  including viewing it at phone size.
+
+#### ⌨️ `gauthamwho-ideas/` and `gauthamwho-start/`: the extra commands
+- **What:** tiny files that create the `/gauthamwho-ideas` and `/gauthamwho-start` commands.
+  Each one says "run this part of gauthamwho-edit".
+- **When it's used:** only when **you** type that command. Claude never starts them by itself.
+
+#### 🖼️ `assets/`: pictures for this page
+Only used by this README. The skill doesn't need them.
+
+### Does anything run automatically?
+
+| | Runs by itself? | How it starts |
+|---|---|---|
+| `/gauthamwho-edit` | **Yes**, if you say things like "edit this reel" or "add a ghost at 0:36" | or type `/gauthamwho-edit` |
+| `/gauthamwho-ideas` | No | you type `/gauthamwho-ideas` |
+| `/gauthamwho-start` | No | you type `/gauthamwho-start` |
+| everything in the table above | Yes, **Claude opens them for you** | never by you |
+
+### Want to change a rule?
+
+Don't edit the files by hand. Just tell Claude in plain words, for example:
+
+> "Update my gauthamwho skill: punch-ins should be 120 %, not 130 %."
+
+> "Add to my skill: never put graphics on food shots."
+
+Claude changes the right file. Ask it to push to GitHub and every computer gets the new rule.
 
 Credits: vendored guides from [calesthio/generative-media-skills](https://github.com/calesthio/generative-media-skills) (MIT).
 The idea methods draw on Oblique Strategies, SCAMPER, benign violation theory (McGraw & Warren 2010),
