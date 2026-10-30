@@ -20,6 +20,17 @@ the way I like them:
 
 Built and approved on Reel 29 (October 2026); story graphics approved in Reel 29 v6 (air fryer) and v7 (ghost).
 
+## Companion skills
+
+For story graphics the skill reads other skills at each stage (`clean-cut-vlog-edit/reference/skill-routing.md`).
+Install these alongside it:
+- [CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) (MIT): copy its 13 `skills/threejs-*` folders into the skills folder.
+- Already on the original PC: directing-live-video, business-motion-film, shot-recipes, animation-principles,
+  shot-composition, color-motion, motion-art-direction, remotion-best-practices.
+The three compositing / shot-direction / social-short guides from
+[calesthio/generative-media-skills](https://github.com/calesthio/generative-media-skills) (MIT) are bundled in
+`clean-cut-vlog-edit/vendor/`.
+
 ## Install
 
 Copy the `clean-cut-vlog-edit` folder into your Claude Code skills folder:

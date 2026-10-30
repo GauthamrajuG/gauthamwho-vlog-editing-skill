@@ -178,6 +178,26 @@ shut, a wrist-up hand clicks the button, and a globe spinning left→right slows
 On "slow" (the punch-in) the fryer is thrown off and the globe glides behind his head, then
 squashes and whips away with a stretch.
 
+### Ideas first (the creative engine)
+
+When the creator gives a clip without a script, or asks for ideas, or a script leaves room:
+run `reference/creative-engine.md` before anything else. That means the opportunity
+inventory of the footage, at least one idea per lens (10 lenses, including the hidden passenger
+like the ghost and the audience's viewing moment), the anti-generic filter (the 10-second
+test, surprising-but-safe, fits the frame, send-worthy, 1–3 per reel), and the top 3 sketched
+for them to choose from. Never offer the first obvious idea alone. Check
+`D:/Claude/Video/lore.md` for callbacks.
+
+### Use the best skills at every stage
+
+`reference/skill-routing.md` maps each stage (ideas, beat sheet, look, lighting/compositing,
+motion, camera, framing, motion blur, sound, retention, review) to the installed skills and the
+exact files to read: directing-live-video, business-motion-film, shot-recipes,
+animation-principles, motion-doctrine, shot-composition, color-motion, the 13 threejs-* skills,
+remotion-best-practices, and the vendored vfx-compositing / cinematic-shot-direction /
+social-short-production guides in `vendor/`. It also lists the skills that are **never** used
+(paid APIs, AI video). Our rules override all of them.
+
 ### From their script to frames (do this before any storyboard)
 
 1. Analyse the clip as in Job A: probe, shots, Tamil word timings + translation, contact sheet.
@@ -283,6 +303,8 @@ Full pipeline, numbers and traps: `reference/story-graphics.md`. Code to start f
 
 - You are opening Remotion or HyperFrames, or choosing a transition, font, music or SFX —
   unless the creator asked for a story graphic (Job B), and then only for those beats.
+- Job B: you offered one idea, or ideas a generic AI would give, without running the creative
+  engine; or you used a skill from the "never" list in skill-routing.md.
 - Job B: a body or object ends in a straight line or fades out where it's "not seen", you
   skipped a rung of the approval ladder, a glowing thing doesn't light its surroundings, the
   graphic is sharper/cleaner/brighter-black than the footage, or it slides in a straight line.
@@ -295,4 +317,5 @@ Full pipeline, numbers and traps: `reference/story-graphics.md`. Code to start f
 - You started cutting before the intake answer, or encoding with < 3 GB free memory.
 
 Exact commands, file formats, tools, downloads and machine fixes: `reference/pipeline.md`.
-Story graphics: `reference/story-graphics.md`.
+Story graphics: `reference/story-graphics.md`. Ideas: `reference/creative-engine.md`.
+Which skill at which stage: `reference/skill-routing.md`.
