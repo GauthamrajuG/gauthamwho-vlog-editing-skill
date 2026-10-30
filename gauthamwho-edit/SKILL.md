@@ -22,8 +22,8 @@ while making it.
 - `/gauthamwho-edit <folder>`: the clean edit (Job A). If a script or graphic description
   follows the folder, it's Job B for that graphic.
 - `/gauthamwho-ideas <folder>`: only the creative engine (skill `gauthamwho-ideas`).
-- `/gauthamwho-edit-ideas <folder>`: the clean edit plus a creative menu in one message
-  (skill `gauthamwho-edit-ideas`).
+- `/gauthamwho-start <folder>`: the clean edit plus a creative menu in one message
+  (skill `gauthamwho-start`).
 
 **This skill does two jobs:**
 - **Job A, the clean edit** (below): every time they ask for an edit.

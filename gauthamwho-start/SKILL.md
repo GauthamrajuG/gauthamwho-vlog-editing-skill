@@ -1,11 +1,11 @@
 ---
-name: gauthamwho-edit-ideas
-description: GauthamWho clean edit plus the creative engine in one go. One message with the clean-edit questions and a creative menu of the top 3 graphic ideas, then the clean edit is built and only the chosen ideas go through the graphics steps. Typed by the creator as /gauthamwho-edit-ideas <folder or clip>.
+name: gauthamwho-start
+description: GauthamWho clean edit plus the creative engine in one go. One message with the clean-edit questions and a creative menu of the top 3 graphic ideas, then the clean edit is built and only the chosen ideas go through the graphics steps. Typed by the creator as /gauthamwho-start <folder or clip>.
 disable-model-invocation: true
 argument-hint: <folder or clip path>
 ---
 
-# GauthamWho edit + ideas
+# GauthamWho start: edit + ideas
 
 Run the `gauthamwho-edit` skill's **Job A (clean edit)** and its **creative engine** together
 on: $ARGUMENTS
