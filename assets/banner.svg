@@ -1,0 +1,17 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' width='1200' height='300'>
+<rect width='1200' height='300' rx='18' fill='#14171C'/>
+<g transform='translate(70,70)'>
+  <rect x='0' y='0' width='96' height='160' rx='14' fill='none' stroke='#E9ECF1' stroke-width='5'/>
+  <rect x='18' y='34' width='60' height='92' rx='6' fill='none' stroke='#FF4D61' stroke-width='4' stroke-dasharray='9 6'/>
+  <circle cx='38' cy='66' r='5' fill='#FF4D61'/><circle cx='58' cy='66' r='5' fill='#FF4D61'/>
+  <line x1='18' y1='64' x2='78' y2='64' stroke='#9CA4B3' stroke-width='1.5' stroke-dasharray='4 4'/>
+</g>
+<text x='210' y='138' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='78' font-weight='800' fill='#E9ECF1'>GauthamWho<tspan fill='#FF4D61'>.</tspan>edit</text>
+<text x='214' y='188' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='24' fill='#9CA4B3'>Clean vlog edits · ideas nobody else has · real-looking 3D in real footage</text>
+<g font-family='Consolas, Menlo, monospace' font-size='22'>
+  <rect x='214' y='214' width='238' height='40' rx='20' fill='#12303A'/><text x='234' y='241' fill='#57B9CC'>/gauthamwho-edit</text>
+  <rect x='466' y='214' width='250' height='40' rx='20' fill='#3A2C12'/><text x='486' y='241' fill='#E3AB4F'>/gauthamwho-ideas</text>
+  <rect x='730' y='214' width='250' height='40' rx='20' fill='#3A1A20'/><text x='750' y='241' fill='#FF4D61'>/gauthamwho-start</text>
+</g>
+<circle cx='1130' cy='52' r='9' fill='#FF4D61'/><text x='1078' y='59' font-family='Consolas, Menlo, monospace' font-size='18' fill='#FF4D61'>REC</text>
+</svg>

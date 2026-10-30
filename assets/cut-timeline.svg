@@ -1,0 +1,69 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 360' width='1200' height='360'>
+<rect width='1200' height='360' rx='18' fill='#14171C'/>
+<text x='24' y='108' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='22' font-weight='700' fill='#E9ECF1'>Your clip</text>
+<text x='24' y='248' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='22' font-weight='700' fill='#E9ECF1'>Your reel</text>
+<rect x='150.0' y='80' width='138.0' height='46' rx='3' fill='#3A2C12' stroke='#E3AB4F' stroke-width='1.2'/>
+<text x='219.0' y='70' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3' text-anchor='middle'>uncut opening</text>
+<rect x='288.0' y='92' width='16.1' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='306.9' y='92' width='11.5' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='318.4' y='80' width='15.0' height='46' rx='3' fill='#3A1A20' stroke='#FF4D61' stroke-width='1.2'/>
+<text x='325.8' y='144' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' fill='#FF4D61' text-anchor='middle'>cut</text>
+<rect x='333.3' y='92' width='20.7' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='356.3' y='92' width='9.2' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='365.5' y='80' width='25.3' height='46' rx='3' fill='#3A1A20' stroke='#FF4D61' stroke-width='1.2'/>
+<text x='378.2' y='144' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' fill='#FF4D61' text-anchor='middle'>cut</text>
+<rect x='390.8' y='92' width='13.8' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='408.1' y='92' width='18.4' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='426.5' y='80' width='11.5' height='46' rx='3' fill='#3A1A20' stroke='#FF4D61' stroke-width='1.2'/>
+<text x='432.2' y='144' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' fill='#FF4D61' text-anchor='middle'>cut</text>
+<rect x='438.0' y='92' width='11.5' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='451.8' y='92' width='16.1' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='467.9' y='80' width='20.7' height='46' rx='3' fill='#3A1A20' stroke='#FF4D61' stroke-width='1.2'/>
+<text x='478.2' y='144' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' fill='#FF4D61' text-anchor='middle'>cut</text>
+<rect x='488.6' y='92' width='13.8' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='506.5' y='92' width='20.7' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<text x='407.6' y='70' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3' text-anchor='middle'>talking: pauses over 0.25 s are cut</text>
+<rect x='527.2' y='80' width='115.0' height='46' rx='3' fill='#12303A' stroke='#57B9CC' stroke-width='1.2'/>
+<rect x='527.2' y='80' width='9.2' height='46' rx='3' fill='#3A1A20' stroke='none' stroke-width='1.2'/>
+<rect x='633.0' y='80' width='9.2' height='46' rx='3' fill='#3A1A20' stroke='none' stroke-width='1.2'/>
+<text x='584.7' y='70' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3' text-anchor='middle'>b-roll</text>
+<rect x='642.2' y='80' width='184.0' height='46' rx='3' fill='#3A2C12' stroke='#E3AB4F' stroke-width='1.2'/>
+<text x='734.2' y='70' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3' text-anchor='middle'>plug → switch on (kept whole)</text>
+<rect x='150.0' y='220' width='138.0' height='46' rx='3' fill='#3A2C12' stroke='#E3AB4F' stroke-width='1.2'/>
+<rect x='288.0' y='232' width='16.1' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='306.9' y='232' width='11.5' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='322.0' y='232' width='20.7' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='345.0' y='232' width='9.2' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='357.9' y='232' width='13.8' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='375.2' y='232' width='18.4' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='397.2' y='232' width='11.5' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='411.1' y='232' width='16.1' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='430.8' y='232' width='13.8' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='448.8' y='232' width='20.7' height='22' rx='3' fill='#E9ECF1' stroke='none' stroke-width='1.2'/>
+<rect x='356.1' y='213' width='39.3' height='60' rx='4' fill='none' stroke='#FF4D61' stroke-width='3'/>
+<text x='375.7' y='206' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#FF4D61' text-anchor='middle'>punch-in 130 %</text>
+<line x1='320.2' y1='269' x2='320.2' y2='280' stroke='#9CA4B3' stroke-dasharray='3 3'/>
+<line x1='356.1' y1='269' x2='356.1' y2='280' stroke='#9CA4B3' stroke-dasharray='3 3'/>
+<line x1='395.4' y1='269' x2='395.4' y2='280' stroke='#9CA4B3' stroke-dasharray='3 3'/>
+<line x1='429.0' y1='269' x2='429.0' y2='280' stroke='#9CA4B3' stroke-dasharray='3 3'/>
+<text x='378.7' y='296' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' fill='#9CA4B3' text-anchor='middle'>jump cuts (where the pauses were)</text>
+<rect x='469.5' y='220' width='96.6' height='46' rx='3' fill='#12303A' stroke='#57B9CC' stroke-width='1.2'/>
+<rect x='566.1' y='220' width='184.0' height='46' rx='3' fill='#3A2C12' stroke='#E3AB4F' stroke-width='1.2'/>
+<line x1='150.0' y1='126' x2='150.0' y2='220' stroke='#2B303A'/>
+<line x1='288.0' y1='126' x2='288.0' y2='220' stroke='#2B303A'/>
+<line x1='527.2' y1='126' x2='469.5' y2='220' stroke='#2B303A'/>
+<line x1='642.2' y1='126' x2='566.1' y2='220' stroke='#2B303A'/>
+<line x1='826.2' y1='126' x2='750.1' y2='220' stroke='#2B303A'/>
+<text x='826.2' y='108.0' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#E9ECF1' text-anchor='start'>  29 s</text>
+<text x='750.1' y='248.0' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#E9ECF1' text-anchor='start'>  26.1 s</text>
+<rect x='150' y='322' width='16' height='14' rx='2' fill='#3A2C12' stroke='#E3AB4F' stroke-width='1.5'/>
+<text x='172' y='335' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3'>protected: plays whole</text>
+<rect x='382' y='322' width='16' height='14' rx='2' fill='#E9ECF1' stroke='none' stroke-width='1.5'/>
+<text x='404' y='335' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3'>your words</text>
+<rect x='518' y='322' width='16' height='14' rx='2' fill='#3A1A20' stroke='#FF4D61' stroke-width='1.5'/>
+<text x='540' y='335' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3'>removed</text>
+<rect x='630' y='322' width='16' height='14' rx='2' fill='#12303A' stroke='#57B9CC' stroke-width='1.5'/>
+<text x='652' y='335' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3'>b-roll</text>
+<rect x='734' y='322' width='16' height='14' rx='2' fill='none' stroke='#FF4D61' stroke-width='1.5'/>
+<text x='756' y='335' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' fill='#9CA4B3'>punch-in</text>
+</svg>
