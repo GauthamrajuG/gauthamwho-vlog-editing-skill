@@ -1,6 +1,6 @@
 ---
 name: clean-cut-vlog-edit
-description: Use when the user (a Tamil/English vlog creator) hands over their own phone footage — a single clip they already assembled in order, or a folder like "Reel 29" — and asks to edit it, make it a reel, make it "high retention", tighten it, cut the empty spaces, or add punch-ins/zooms, even when they only paste a path. Takes priority over reel-edit, short-form-edit and any skill that restructures, decorates or adds music to footage.
+description: Use when the user (a Tamil/English vlog creator, GauthamWho) hands over their own phone footage — a single clip they already assembled in order, or a folder like "Reel 29" — and asks to edit it, make it a reel, make it "high retention", tighten it, cut the empty spaces, or add punch-ins/zooms, even when they only paste a path. Also use when they want graphics, 3D objects, characters or effects (like the air fryer, globe or ghost) composited INTO their real footage at a moment they name, with or without a script of what should happen, tracked to the room or to them. Takes priority over reel-edit, short-form-edit, directing-live-video and any skill that restructures, decorates or adds music to footage.
 ---
 
 # Clean-cut vlog edit
@@ -18,9 +18,14 @@ Approved reference: Reel 29 → `Reel 29/Reel29_clean_SDR_v5.mp4` (posted) and
 `Reel29_clean_HDR_v5.mp4`. Every rule below comes from what the creator accepted or rejected
 while making it.
 
-**Add-on, only when the creator asks:** a 3D story graphic acted out on one line, composited
-into the room and behind them. Approved in Reel 29 v6 (the air fryer + slowing globe); see
-"Story graphics" below. It never replaces the rules of the clean edit.
+**This skill does two jobs:**
+- **Job A, the clean edit** (below): every time they ask for an edit.
+- **Job B, story graphics**: 3D objects or characters composited into the real footage at a
+  moment they name, often from a script they give ("at 0:36 a ghost rises behind my left
+  shoulder, then…"). It runs on its own when they bring a clip just for graphics, or after
+  Job A is approved. Approved examples: Reel 29 v6 (air fryer + slowing globe) and v7 (the
+  hooded ghost). Job B never changes the rules of Job A.
+Only Job B may open Remotion. Everything in "Story graphics (Job B)" below is mandatory for it.
 
 ## When to use
 
@@ -30,8 +35,12 @@ into the room and behind them. Approved in Reel 29 v6 (the air fryer + slowing g
 - Even if they also mention Remotion, HyperFrames, "centre the frame", "transitions" or
   "effects" — those words do not license effects. The punch-ins below are the effect.
 
-Not for: scripted motion-graphics videos (GoldKiller/Vox-style), or footage someone
-explicitly asks to restructure.
+- Job B: "add a graphic / animation / 3D object / ghost / effect to my clip at 0:36", "here is
+  my clip and the script of what should happen", "track it to the video", "like the air fryer".
+
+Not for: fully animated videos with no real footage (GoldKiller/Vox-style explainers, ads
+built from a script alone: use directing-live-video), or footage someone explicitly asks to
+restructure.
 
 ## The finished edit, as a recipe
 
@@ -160,24 +169,74 @@ Stated in the message text, not asked:
    punch-in (time + line) and every remaining cut region, so the creator can ask for any of it
    back. Keep it simple: the creator is new to editing terms — explain any term you use.
 
-## Story graphics (add-on — only when the creator asks)
+## Story graphics (Job B)
 
-Only after the clean edit is approved, and only on the line the creator names. Approved
-example: Reel 29 v6, "after I switch on the air fryer, the world gets slow". A modelled air
-fryer drops in and its drawer slides shut, a wrist-up hand clicks the button, and a globe
-spinning left→right slows to a crawl. On "slow" (the punch-in) the fryer is thrown off and
-the globe glides behind his head, then squashes and whips away with a stretch.
+Runs on its own (a clip brought just for graphics) or after the clean edit is approved, and
+only at the moments the creator names. Approved example 1: Reel 29 v6, "after I switch on
+the air fryer, the world gets slow". A modelled air fryer drops in and its drawer slides
+shut, a wrist-up hand clicks the button, and a globe spinning left→right slows to a crawl.
+On "slow" (the punch-in) the fryer is thrown off and the globe glides behind his head, then
+squashes and whips away with a stretch.
 
-What made it land (from their feedback):
+### From their script to frames (do this before any storyboard)
+
+1. Analyse the clip as in Job A: probe, shots, Tamil word timings + translation, contact sheet.
+2. Turn the script into a **beat sheet**. Each beat = what happens, to which object, from frame
+   → to frame (60 fps). A spoken line is located by its word timings, an action ("when I walk
+   in") by its shot. Note where the person is in every beat (shoulder line, head, hands),
+   measured from the frames.
+3. Send the beat sheet in **one message** with the questions that are really open: sides
+   ("your left shoulder = screen right?"), how realistic, sound yes/no, and anything in the
+   script that can't fit the frames (say why, offer the nearest version). Wait for the answer.
+4. Then the approval ladder, a yes at every rung, never skipped:
+   **storyboard on the real frames → storyboard with the real 3D composited (dotted outline
+   where hidden, the path drawn in) → one full-quality still → animation → ~4–5 s preview with
+   sound → swapped into the full video as the next version** (`Final video/` naming, rule 10).
+
+### The realism checklist (every object, every frame — non-negotiable)
+
+1. **Whole object, always.** Model and render the complete body or object, including the parts
+   hidden behind the person or below the frame edge. Never end a body in a straight line,
+   fade or dissolve it to save modelling, or build only the visible half: when it moves, the
+   viewer sees all of it. Only the person's cut-out (or a real foreground object) hides it.
+2. **Depth.** SAM 2.1 cut-out of the person on every frame, refined with a guided filter so
+   hair strands stay in front. Graphics go behind them where the script says. Nothing is
+   pasted over a face.
+3. **Locked to the scene.** Anchor to the person (shoulder or head measured from the cut-out
+   each frame) or to a surface by camera tracking, but only if the tracking is validated (grid
+   overlay). If it isn't accurate, keep it fixed and say so.
+4. **Lit by the room.** Key light from the scene's real light direction and colour (look at
+   which surfaces are bright), a dim fill, reflections from an environment map. A dark scene
+   gets a dark object that is still readable by its rim.
+5. **Graded to the footage.** Lift the CG blacks to the plate's black level, match warmth and
+   saturation, soften to the plate's sharpness, defocus by depth (behind the person = like
+   the wall), add the plate's own measured noise, and motion-blur along the travel.
+6. **Shadows.** A soft contact or cast shadow on the nearest surface, away from the light.
+7. **Light it gives off lights the world.** Glowing eyes, screens or fire are light sources,
+   computed in linear light with inverse-square falloff: a rim on the person's edges that face
+   it, a back-light rim when it's behind them, a local spill on nearby walls, and lens bloom
+   on what's visible.
+8. **Moves like it's alive or has weight.** Springs with overshoot, anticipation before a big
+   move, arcs and curves (never straight sticker slides), easing, secondary motion (cloth,
+   hems, tails trail through a spring follower), breathing when still. Cap banking (~0.3 rad).
+9. **Sides are the creator's body sides.** In a non-mirrored iPhone selfie their LEFT is
+   SCREEN RIGHT. Always write both.
+10. **Sound only for the graphic.** Synthesised, soft and sparse (no glitches, sparkles,
+    buzzers, dings, long risers), at most one every 1.5–2 s, under the voice; overall
+    −14 to −15 LUFS.
+11. **Self-check before showing anything.** Look at frames across the whole beat, twice.
+    Check the frame count of every output and the frames at both joins (difference < 1/255
+    against the sources).
+12. 60 fps, no AI-generated video, no paid services.
+
+What made example 1 land (from their feedback):
 - **objects act out the words**: no text, no speed lines;
 - **properly modelled 3D** (Remotion + `@remotion/three`) with physics in the motion;
 - **graded into the room**: black level, warmth, grain, softness, a soft wall shadow;
 - **depth**: their SAM 2.1 cut-out laid back on top, so the graphic sits behind them;
 - **tracking only if it's accurate**; otherwise fixed (on a plain wall it drifted, so it
   was skipped);
-- **quiet synthesised SFX for the graphics only**, under the voice;
-- **storyboard photos → style frame → animation**, a yes at each step;
-- the quality bar is a professional After Effects designer. No AI video.
+- the quality bar is a professional After Effects designer.
 
 Second approved example, Reel 29 v7: a **hyper-real hooded ghost** on the dark walk-in. It
 rises behind their LEFT shoulder (screen right) only to shoulder level, its red eyes light
@@ -223,7 +282,10 @@ Full pipeline, numbers and traps: `reference/story-graphics.md`. Code to start f
 ## Red flags — stop and re-read the recipe
 
 - You are opening Remotion or HyperFrames, or choosing a transition, font, music or SFX —
-  unless the creator asked for a story graphic on a named line (then only for that beat).
+  unless the creator asked for a story graphic (Job B), and then only for those beats.
+- Job B: a body or object ends in a straight line or fades out where it's "not seen", you
+  skipped a rung of the approval ladder, a glowing thing doesn't light its surroundings, the
+  graphic is sharper/cleaner/brighter-black than the footage, or it slides in a straight line.
 - An ffmpeg command uses `split` + `trim` on one long input (it buffers frames in RAM and
   can drop frames silently), or you're delivering without checking the frame count.
 - You are about to run ffmpeg-skill `broll.py`, `color.py --to-sdr` or `fit.py` on this footage.

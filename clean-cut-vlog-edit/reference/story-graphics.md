@@ -1,12 +1,14 @@
-# Story graphics: 3D motion graphics inside the footage (add-on)
+# Story graphics: 3D motion graphics inside the footage (Job B)
 
-Only when the creator asks for it, and only on the line they name. The approved example is
+Only when the creator asks for it, and only at the moments they name (a line, a shot, or their script). The approved example is
 Reel 29's "after I switch on the air fryer, the world gets slow": v6, `Reel 29/Final
 video/GauthamWho_Reel29_AirFryerWorld_v6_SDR.mp4`, at 57.5–63.7 s. The creator's words:
 "Oh, I just love what you made."
 
-The clean-cut edit (SKILL.md) is always finished and approved first. A graphic is cut into
-the approved SDR file afterwards. It is never a reason to redo the edit.
+The graphic is cut into the creator's latest approved SDR file. If they bring a clip just for
+graphics, make the SDR plate from the original through its own Dolby Vision mapping (step 2)
+and deliver the clip with the graphic. A graphic is never a reason to redo the edit. The
+non-negotiable realism checklist is in SKILL.md ("Story graphics (Job B)").
 
 ## What the creator wants (every point came from their feedback)
 
