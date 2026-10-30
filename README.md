@@ -342,7 +342,7 @@ Small programs Claude runs for you. You never run them yourself.
 
 | Script | What it does | Example |
 |---|---|---|
-| `transcribe.py` | writes down your Tamil speech with the time of every word, plus English | knows "petrol" is said at 13.61 s, so a cut never lands inside the word |
+| `transcribe.py` | writes down your Tamil speech with the time of every word, plus English | knows exactly when each word of "who'll put petrol?" is said, so a cut never lands inside a word |
 | `plan_cuts.py` | turns your answers + the words into the list of cuts | removes a 1.1 s pause, keeps your "plug → switch on" whole |
 | `eye_grid.py` | puts a grid on a frame so your eye position can be measured | places the punch-in so your eyes sit on the upper third |
 | `build_reel.py` | builds the two final videos from the original clip | makes `Reel30_clean_SDR.mp4` and `Reel30_clean_HDR.mp4` |
