@@ -18,6 +18,13 @@ Approved reference: Reel 29 → `Reel 29/Reel29_clean_SDR_v5.mp4` (posted) and
 `Reel29_clean_HDR_v5.mp4`. Every rule below comes from what the creator accepted or rejected
 while making it.
 
+**How the creator calls it (three commands):**
+- `/gauthamwho-edit <folder>`: the clean edit (Job A). If a script or graphic description
+  follows the folder, it's Job B for that graphic.
+- `/gauthamwho-ideas <folder>`: only the creative engine (skill `gauthamwho-ideas`).
+- `/gauthamwho-edit-ideas <folder>`: the clean edit plus a creative menu in one message
+  (skill `gauthamwho-edit-ideas`).
+
 **This skill does two jobs:**
 - **Job A, the clean edit** (below): every time they ask for an edit.
 - **Job B, story graphics**: 3D objects or characters composited into the real footage at a

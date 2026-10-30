@@ -33,13 +33,19 @@ The three compositing / shot-direction / social-short guides from
 
 ## How to call it
 
-In Claude Code type `/gauthamwho-edit` followed by the folder, e.g.
-`/gauthamwho-edit D:\Claude\Video\Reel 30`. Add `give me ideas` for the creative engine, or
-describe a graphic ("at 0:36 a ghost rises behind my left shoulder…") for story graphics.
+| Type in Claude Code | You get |
+|---|---|
+| `/gauthamwho-edit D:\Claude\Video\Reel 30` | the clean edit: one message with up to 4 questions, then the SDR + HDR files |
+| `/gauthamwho-ideas D:\Claude\Video\Reel 30` | the creative engine only: the opportunity list, the top 3 ideas sketched on your frames, and the rest in one line each. Nothing is built |
+| `/gauthamwho-edit-ideas D:\Claude\Video\Reel 30` | both in one message: the edit questions plus a creative menu. The clean edit is built, then the ideas you pick go through the graphics steps |
+| `/gauthamwho-edit D:\Claude\Video\Reel 30 at 0:36 a ghost rises behind my left shoulder…` | that graphic from your script: beat sheet → storyboard → still → preview → full video |
+
+Install all three folders (`gauthamwho-edit`, `gauthamwho-ideas`, `gauthamwho-edit-ideas`). The last
+two are short command files that run parts of `gauthamwho-edit`.
 
 ## Install
 
-Copy the `gauthamwho-edit` folder into your Claude Code skills folder:
+Copy the `gauthamwho-edit`, `gauthamwho-ideas` and `gauthamwho-edit-ideas` folders into your Claude Code skills folder:
 
 - Windows: `C:\Users\<you>\.claude\skills\gauthamwho-edit`
 - macOS / Linux: `~/.claude/skills/gauthamwho-edit`
