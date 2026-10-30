@@ -1,9 +1,9 @@
 ---
-name: clean-cut-vlog-edit
+name: gauthamwho-edit
 description: Use when the user (a Tamil/English vlog creator, GauthamWho) hands over their own phone footage — a single clip they already assembled in order, or a folder like "Reel 29" — and asks to edit it, make it a reel, make it "high retention", tighten it, cut the empty spaces, or add punch-ins/zooms, even when they only paste a path. Also use when they want graphics, 3D objects, characters or effects (like the air fryer, globe or ghost) composited INTO their real footage at a moment they name, with or without a script of what should happen, tracked to the room or to them. Takes priority over reel-edit, short-form-edit, directing-live-video and any skill that restructures, decorates or adds music to footage.
 ---
 
-# Clean-cut vlog edit
+# GauthamWho edit
 
 ## Overview
 

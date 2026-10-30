@@ -1,10 +1,10 @@
-# Clean-cut vlog edit — pipeline reference
+# GauthamWho edit — pipeline reference
 
 Everything runs from a work folder outside the footage folder, e.g. `D:/Claude/Video/work/reel30/`.
 
 ```bash
 S="$HOME/.claude/skills/ffmpeg-skill/scripts"        # ffmpeg-skill (analysis, checks)
-K="$HOME/.claude/skills/clean-cut-vlog-edit"        # this skill
+K="$HOME/.claude/skills/gauthamwho-edit"        # this skill
 FULL="D:/Claude/Video/tools/ffmpeg-full/ffmpeg-9.0.2-full_build/bin/ffmpeg.exe"
 SRC="D:/Claude/Video/Reel 30/IMG_XXXX.MP4"          # the creator's file — read only
 W="D:/Claude/Video/work/reel30"; mkdir -p "$W"; cd "$W"
